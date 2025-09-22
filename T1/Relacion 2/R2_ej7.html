@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relacion 2 Ejercicio 7</title>
+</head>
+<body>
+    <script>
+        nColumnas=parseInt(prompt("Dime el número de columnas que va a tener la tabla"));
+        nFilas=parseInt(prompt("Dime el número de columnas que va a tener la tabla"));
+        ancho=parseInt(prompt("Dime el ancho en pixels: "));
+        alto=parseInt(prompt("Dime el alto en pixels: "));
+
+        document.write("<table border='0' cellspacing='2' bgcolor='black' width='200'>");
+        for (let index = 0; index < nFilas; index++) {
+            document.write("<tr bgcolor='white' height="+alto+">")
+            for (let f = 0; f < nColumnas; f++) {
+            document.write("<td width="+ancho+">&nbsp;</td>");
+        }
+        }
+        
+        document.write("</tr>");
+        document.write("</table>");
+    </script>
+</body>
+</html>

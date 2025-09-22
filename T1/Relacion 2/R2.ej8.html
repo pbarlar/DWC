@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relacion 2 Ejercicio 8</title>
+</head>
+
+<body>
+    <script>
+        ancho = parseInt(prompt("Dime el numero de px que va a tener de ancho y alto: "))
+        document.write("<table border='0' cellspacing='2' bgcolor='black'>");
+
+        for (let index = 0; index < 8; index++) {
+            document.write("<tr height='" + ancho + "'>");
+            for (let f = 0; f < 8; f++) {
+                if (index % 2 == 0) {
+                    if (f % 2 != 0) {
+                        document.write(`<td width="${ancho}" style='background-color:black'>&nbsp;</td>`);
+                    } else {
+                        document.write(`<td width="${ancho}" style='background-color:white'>&nbsp;</td>`);
+                    }
+                } else {
+                    if (f % 2 == 0) {
+                        document.write(`<td width="${ancho}" style='background-color:white'>&nbsp;</td>`);
+                    } else {
+                        document.write(`<td width="${ancho}" style='background-color:black'>&nbsp;</td>`);
+                    }
+                }
+
+            }
+        }
+        document.write("</table>")
+    </script>
+</body>
+
+</html>
