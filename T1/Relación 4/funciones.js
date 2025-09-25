@@ -20,7 +20,7 @@ function sum(... argumentos) {
  * @param  {...any} argumentos Introducir cualquier tipo de dato
  * @returns Devuelve la suma de los numeros introducidos
  */
-
+// Ejercicio 2
 function addOnlyNums(... argumentos) {
     let sum=0;
 
@@ -33,7 +33,7 @@ function addOnlyNums(... argumentos) {
 }
 
 
-
+//Ejercicio 3
 function countTheArgs(... argumentos) {
     let count=0;
 
@@ -45,7 +45,7 @@ function countTheArgs(... argumentos) {
 }
 
 
-
+//Ejercicio 4
 function combineTwoArrays(array1, array2) {
     arrayCombined=new Array();
 
@@ -60,11 +60,60 @@ function combineTwoArrays(array1, array2) {
     return arrayCombined;
 }
 
-
+//Ejercicio 6
 function divisiblePorTres(num1) {
     if (num1%3==0) {
         return true;
     }else{
         return false
     }
+}
+
+
+//Ejercicio 7
+function divisibleEntre(n1,n2) {
+    if (n1%n2==0) {
+        return true;
+    }else{
+        false;
+    }
+}
+
+
+//Ejercicio 8
+function rango(num1,rangoInf,rangoSup) {
+    if (num1>rangoSup && num1<rangoSup) {
+        return true;
+    }else{
+        return false;
+    }
+}
+
+//Ejercicio 9
+function tieneTresDigitos(n1) {
+    if (n1>99) {
+        return true;
+    }else{
+        return false;
+    }
+}
+
+//Ejercicio 10
+function areaRectangulo(lado1,lado2) {
+    let area=lado1*lado2;
+    return area;
+}
+
+
+//Ejercicio 11
+function imc(peso,altura) {
+    let imc=peso/(altura*2);
+    return imc;
+}
+
+
+//Ejercicio 12
+function precioFinal(precioInicial,descuento) {
+    let precioFinal=precioInicial-(precioInicial*0,descuento);
+    return precioFinal;
 }
