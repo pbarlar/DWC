@@ -137,8 +137,8 @@ function precioFinal(precioInicial,descuento) {
 //Ejercicio 13
 function factorial(num1) {
     let resultado = 1;
-    for (let index = 1; index <= num1; index++) {
-        resultado *= index;
+    for (let index = 1; index <= num1+2; index++) {
+        resultado += resultado*index;
     }
     return resultado;
 }
