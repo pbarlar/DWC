@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 Relación 1</title>
+</head>
+
+<body>
+    <h1>Ejercicio 2 relación 1</h1>
+    <script>
+        let cumpleaños = prompt("Dime la fecha de tu cumpleaños(Formate YYYY-MM-DD)");
+        let partes=cumpleaños.split("-");
+        let cumpleañosDate = new Date(partes[0],partes[1]-1,partes[2]);
+        
+
+        for (let año = cumpleañosDate.getFullYear(); año <= 2100; año++) {
+            let fecha = new Date(cumpleañosDate); 
+            fecha.setFullYear(año); 
+
+            if (fecha.getDay() === 6) { 
+                document.write(`En el año ${año} tu cumpleaños cae en domingo<br>`);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
