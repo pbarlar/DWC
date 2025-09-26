@@ -60,6 +60,21 @@ function combineTwoArrays(array1, array2) {
     return arrayCombined;
 }
 
+
+//Ejercicio 5
+function sumEveryOthers(... argumentos) {
+    let suma=0;
+    for (let index = 0; index < argumentos.length; index++) {
+        if (index%2==0) {
+            suma+=argumentos[index];
+        }
+    }
+    return suma;
+}
+
+
+
+
 //Ejercicio 6
 function divisiblePorTres(num1) {
     if (num1%3==0) {
@@ -116,4 +131,14 @@ function imc(peso,altura) {
 function precioFinal(precioInicial,descuento) {
     let precioFinal=precioInicial-(precioInicial*0,descuento);
     return precioFinal;
+}
+
+
+//Ejercicio 13
+function factorial(num1) {
+    let resultado = 1;
+    for (let index = 1; index <= num1; index++) {
+        resultado *= index;
+    }
+    return resultado;
 }

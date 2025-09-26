@@ -15,12 +15,12 @@
         let cumpleañosDate = new Date(partes[0],partes[1]-1,partes[2]);
         
 
-        for (let año = cumpleañosDate.getFullYear(); año <= 2100; año++) {
+        for (let year = cumpleañosDate.getFullYear(); year <= 2100; year++) {
             let fecha = new Date(cumpleañosDate); 
-            fecha.setFullYear(año); 
+            fecha.setFullYear(year); 
 
             if (fecha.getDay() === 6) { 
-                document.write(`En el año ${año} tu cumpleaños cae en domingo<br>`);
+                document.write(`En el año ${year} tu cumpleaños cae en domingo<br>`);
             }
         }
 
