@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9 Relación 1</title>
+</head>
+<body>
+    <h1>Ejercicio 9 Relación 1</h1>
+    <script>
+        let cadena=prompt("Dime una cadena de caracteres y te dire cuantas vocales tiene la cadena: ");
+        let contador=0;
+
+        document.write("Cadena :",cadena,"<br>");
+
+        for (let index = 0; index < cadena.length; index++) {
+            if (cadena.charAt(index)=="a" || cadena.charAt(index)=="e" ||cadena.charAt(index)=="i" ||cadena.charAt(index)=="o" ||cadena.charAt(index)=="u") {
+                contador++;
+            }
+            if (cadena.charAt(index)=="A" || cadena.charAt(index)=="E" ||cadena.charAt(index)=="I" ||cadena.charAt(index)=="O" ||cadena.charAt(index)=="U") {
+                contador++;
+            }     
+        }
+        document.write("Vocales en la cadena: ",contador);
+    </script>
+</body>
+</html>

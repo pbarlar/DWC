@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 Relación 1</title>
+</head>
+<body>
+    <h1>Ejercicio 10 Relación 1</h1>
+    <script>
+        let cadena=prompt("Dime una cadena de caracteres y te dire cuantas veces aparece cada vocal en la cadena: ");
+        let a=0,e=0,i=0,u=0,o=0;
+
+        document.write("Cadena :",cadena,"<br>");
+
+        for (let index = 0; index < cadena.length; index++) {
+            switch (cadena.charAt(index).toLowerCase()) {
+                case "a":
+                    a++;
+                    break;
+                case "o":
+                    o++;
+                    break;
+                case "e":
+                    e++;
+                    break;
+                case "i":
+                    i++;
+                    break;
+                case "u":
+                    u++;
+                    break;
+                default:
+                    break;
+            }   
+        }
+        document.write("Vocal A: ",a,"<br>");
+        document.write("Vocal E: ",e,"<br>");
+        document.write("Vocal I: ",i,"<br>");
+        document.write("Vocal O: ",o,"<br>");
+        document.write("Vocal U: ",u);
+    </script>
+</body>
+</html>
