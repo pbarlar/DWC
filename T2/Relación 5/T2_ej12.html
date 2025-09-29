@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12 Relación 5</title>
+</head>
+<body>
+    <script>
+        let pageName=prompt("Dime el titulo que quieres que tenga tu nueva ventana: ");
+        createWindow(pageName)
+
+        function createWindow(title) {
+            let rigth=screen.availWidth-500;
+            
+            let newWindow=window.open("","",`width=500, height=400, left=${rigth}, top=0`);
+            newWindow.document.write(`<h1>${title}</h1>`);
+        }
+    </script>
+</body>
+</html>

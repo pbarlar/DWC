@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13 Relación 5</title>
+</head>
+<body>
+    <input type="button" value="Abrir ventana" onclick="newWindow()">
+    <input type="button" value="Cerrar ventana" onclick="closeWindow()">
+    
+
+    <script>
+
+        function newWindow() {
+            newWindow=window.open("","New_Window",`width=500, heigth=400`);
+            newWindow.document.write("<input type='button' value='Cerrar ventana' onclick='window.close()'>");
+        }
+
+        function closeWindow() {
+            newWindow.close();
+        }
+    </script>
+</body>
+</html>
