@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 Relación 1</title>
+</head>
+<body>
+    <h1>Ejercicio 5 Relación 1</h1>
+    <script>
+        let opcion=prompt("Introduce una opción \n 1.Potencia \n 2.Raíz \n 3.Redondear \n 4.Trigonometria")
+        let num1,num2,resultado;
+
+        switch (opcion) {
+            case "1":
+                num1=parseInt(prompt("Introduce la base: "));
+                num2=parseInt(prompt("Introduce el exponente: "));
+                resultado=Math.pow(num1,num2);
+                
+
+                document.write(`La potencia de ${num1} elevado a ${num2} es: ${resultado}`)
+                break;
+            case "2":
+                num1=parseInt(prompt("Introduce un número y te dire su raiz cuadrada: "));
+                resultado=Math.sqrt(num1);
+
+                if (isNaN(resultado)) {
+                    document.write("Tienes que introducir un número positivo");
+                }else{
+                    document.write(`La raiz de ${num1} es ${resultado}`)
+                }
+                break;
+            case "3":
+                num1=parseFloat(prompt("Dime un numero decimal y lo redondeare: "));
+                resultado=Math.round(num1);
+
+                document.write(`El numero ${num1} redondeado es ${resultado}`);
+            
+            case "4":
+                num1=parseInt(prompt("Introduce un ángulo entre 0 y 360"));
+                document.write(`Seno de ${num1}: ${Math.acos(num1)}`)
+                document.write(`Coseno de ${num1}: ${Math.asin(num1)}`)
+                document.write(`Tangente de ${num1}: ${Math.atan(num1)}`)
+            default:
+                break;
+        }
+    </script>
+</body>
+</html>
