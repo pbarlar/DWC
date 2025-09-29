@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15 Relación 5</title>
+</head>
+
+<body>
+    <p>Hemos cambiado de ubicación esta página. En breves momentos será redireccionado...</p>
+    <p id="contador"></p>
+    <script>
+        const contador=document.getElementById("contador");
+        let i=6;
+
+        function countdown() {
+            i--;
+            contador.innerHTML=i;
+            if (i>0) {
+                setTimeout(countdown,1000);
+            }else{
+                window.location.href="http://www.pccomponentes.com";
+            }
+        }
+
+        setTimeout(countdown,1000);
+
+    </script>
+</body>
+
+</html>
