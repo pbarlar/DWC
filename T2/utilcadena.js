@@ -11,3 +11,22 @@ function esPalindroma(scad) {
         return false;
     }
 }
+
+
+function containsCad(scad,subcad) {
+    let ncad;
+    let contiene=false;
+    for (let index = 0; index < scad.length; index++) {
+        ncad="";
+        for (let f = 0; f < subcad.length; f++) {
+            ncad+=scad[index+f];
+        }
+
+        if (ncad==subcad) {
+            return true;
+        }
+    }
+
+    return contiene;
+
+}
