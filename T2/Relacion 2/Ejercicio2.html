@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 Relacion 2</title>
+</head>
+<body>
+    <h1>Ejercicio 2 Relación 2</h1>
+    <h3>Reloj actualizado</h3>
+    <p id="fecha"></p>
+
+    <script>
+        let fechaActual=new Date()
+        let fecha=document.getElementById("fecha");
+        fecha.innerHTML=fechaActual.getHours()+":"+fechaActual.getMinutes()+":"+fechaActual.getSeconds();
+
+        setInterval(function () {
+            let fechaNueva =new Date();
+            fecha.innerHTML=fechaNueva.getHours()+":"+fechaNueva.getMinutes()+":"+fechaNueva.getSeconds();
+        },1000)
+    </script>
+</body>
+</html>
