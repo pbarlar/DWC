@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ventana Secundaria</title>
+    <title>Ejercicio 13 Relación 5</title>
 </head>
 <body>
-    <p id="parrafo"></p>
-    <script>
-        function recibeMensaje(texto) {
-            var objeto= document.getElementById("parrafo");
-            objeto.innerHTML=texto;
+    <input type="button" value="Abrir ventana" onclick="newWindow()">
+    <input type="button" value="Cerrar ventana" onclick="closeWindow()">
+    <input type="button" value="Escribir mensaje" onclick="mandarMensaje()">
+    
 
-            function cerrarse() {
-                window.close();
+    <script>
+        let newWindowRef;
+
+        function newWindow() {
+            newWindowRef=window.open("","New_Window",`width=500, height=400`);
+            newWindowRef.location.href='VentanaSecundaria.html';
+        }
+
+        function closeWindow() {
+            newWindowRef.close();
+        }
+
+        function mandarMensaje() {
+            if (newWindowRef && !newWindowRef.closed) {
+                newWindowRef.recibeMensaje('Mensaje desde la ventana principal');
+            } else {
+                alert("La ventana secundaria no está abierta.");
             }
         }
     </script>
-    <button onclick="cerrarse()">Cerrar</button>
 </body>
 </html>
