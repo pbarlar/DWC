@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Prueba</title>
+</head>
+
+<body>
+    
+    <script>
+        
+        function factorial(n1) {
+            let resultado = 1;
+
+            for (let i = 2; i <= n1; i++) {
+                resultado *= i;
+            }
+
+            return resultado;
+        }
+
+
+        function operacion(v1,v2,op) {
+            if (op=="+") {
+                return v1+v2;
+            }else if(op=="-"){
+                return v1-v2;
+            }else if(op=="*"){
+                return v1*v2;
+            }else if (op=="/") {
+                return v1/v2;
+            }
+        }
+
+
+
+        document.write(operacion(4,5,"-"))
+    </script>
+</body>
+
+</html>
