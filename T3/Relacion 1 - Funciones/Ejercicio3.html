@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 Relación 1</title>
+    <script src="funciones.js"></script>
+</head>
+<body>
+    <h1>Ejercicio 3 relación 1</h1>
+    <h3>Probablidades dado</h3>
+    <script>
+        let n1=0,n2=0,n3=0,n4=0,n5=0,n6=0;
+        for (let index = 0; index < 6000; index++) {
+            numDado=lanzamiento();
+            switch (numDado) {
+                case 1:
+                    n1++;
+                    break;
+                case 2:
+                    n2++;
+                    break;
+                case 3:
+                    n3++;
+                    break;
+                case 4:
+                    n4++;
+                    break;
+                case 5:
+                    n5++;
+                    break;
+                case 6:
+                    n6++;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+        document.write("Numero 1: "+n1+"<br>");
+        document.write("Numero 2: "+n2+"<br>")
+        document.write("Numero 3: "+n3+"<br>")
+        document.write("Numero 4: "+n4+"<br>")
+        document.write("Numero 5: "+n5+"<br>")
+        document.write("Numero 6: "+n6+"<br>")
+    </script>
+</body>
+</html>
