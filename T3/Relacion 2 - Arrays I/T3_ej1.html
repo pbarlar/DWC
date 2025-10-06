@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Relación 2</title>
+    <script src="funciones.js"></script>
+</head>
+<body>
+    <h1>Ejercicio 1 Relación 2</h1>
+    <script>
+        let numeros=new Array(5);
+
+        for (let index = 0; index < numeros.length; index++) {
+            numeros[index]=parseInt(prompt(`Introduce el número: `));
+        }
+        
+        
+
+        document.write(`El valor máximo de los que has introducido es ${maxVal(numeros)}<br>`)
+        document.write(`El valor mínimo de los que has introducido es ${minVal(numeros)}<br>`)
+        document.write(`El valor medio de los que has introducido es ${medVal(numeros)}<br>`)
+
+    </script>
+</body>
+</html>
