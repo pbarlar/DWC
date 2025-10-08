@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejecicio 3 Relacion 2</title>
+    <script src="funciones.js"></script>
+</head>
+<body>
+    <h1>Ejercicio 3 Relacion 2</h1>
+    <script>
+        let N=parseInt(prompt("Dime el tamañoq que quieres que tenga el array: "));
+        let numeros=new Array();
+
+        for (let index = 0; index < N; index++) {
+            numeros.push(Math.floor(Math.random()*100));
+            document.write(`Número ${index+1}: ${numeros[index]}<br>`)
+        }
+    </script>
+</body>
+</html>
