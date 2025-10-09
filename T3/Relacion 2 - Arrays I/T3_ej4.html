@@ -9,12 +9,14 @@
 <body>
     <h1>Ejercicio 4 Relacion 2</h1>
     <script>
-        let animales=["Gato","Perro","Pájaro","Hamster","Cerdo"];
-        let colores=["Verde","Azul","Rojo","Negro","Marrón"];
+        let colores=["Rosa","Blanco","Verde","Marrón","Naranja"];
+        let colores2=["Verde","Azul","Rojo","Negro","Marrón"];
         
-        let union=animales.concat(colores);
+        let union=colores.concat(colores2);
 
-        document.write(`La unión de el array de animales y colores ${union}`)
+        document.write(`La unión de el array de animales y colores ${union} <br>`)
+        document.write(`Los elementos que estan en el primer array y no en el segundo son:  ${diferencia(colores,colores2)}<br>`);
+        document.write(`Los elementos que coinciden en los dos array son: ${interseccion(colores,colores2)}`)
     </script>
 </body>
 </html>
