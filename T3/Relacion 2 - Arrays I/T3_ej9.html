@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9 Relación 2</title>
+</head>
+<body>
+    <h1>Ejercicio 9 Relación 2</h1>
+    <script>
+        let cadena=prompt("Introduce una cadena de caracteres: ");
+        let newWindow= window.open("","");
+        let arrCadena=cadena.split(" ");
+    
+        
+        newWindow.document.write(`Numero de palabras: ${arrCadena.length}<br>`);
+        newWindow.document.write(`Primera palabra: ${arrCadena[0]}<br>`);
+        newWindow.document.write(`Ultima palabra: ${arrCadena[arrCadena.length-1]}<br>`);
+        newWindow.document.write(`Palabras en orden inverso ${arrCadena.reverse()}<br>`);
+        newWindow.document.write(`Cadena ordenada a-z ${arrCadena.sort((num1,num2)=>num1.localeCompare(num2))}<br>`)
+        newWindow.document.write(`Cadena ordenada z-a ${arrCadena.sort((num1,num2)=>num2.localeCompare(num1))}`);
+
+        
+    </script>
+</body>
+</html>
