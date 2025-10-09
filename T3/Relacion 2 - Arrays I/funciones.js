@@ -51,3 +51,16 @@ function inArray(arr,value) {
     }
     return false;
 }
+
+
+function diferencia(arr1,arr2) {
+    let diferentes=new Array();
+
+    for (let index = 0; index < arr2.length; index++) {
+        if (arr2.contains(arr1[index])) {
+            diferentes.push(arr1[index]);
+        }
+    }
+    
+    return diferentes;
+}
