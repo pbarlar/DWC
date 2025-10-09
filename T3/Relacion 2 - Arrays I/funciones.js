@@ -25,12 +25,17 @@ function minVal(arr) {
 }
 
 /**
- * Devuelve el valor medio de un array de 5 valores
+ * Devuelve el valor medio de un array
  * @param {Array} arr Array
- * @returns Valor medio del array
+ * @returns Numero
  */
 function medVal(arr) {
-   return arr[2];
+   let suma=0;
+   for (let index = 0; index < arr.length; index++) {
+    suma+=arr[index]; 
+   }
+   let valorMedio=Math.floor(suma/arr.length);
+   return valorMedio;
 }
 
 

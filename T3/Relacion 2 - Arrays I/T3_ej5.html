@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 Relación 2</title>
+    <script src="funciones.js"></script>
+</head>
+<body>
+    <h1>Ejercicio 5 Relación 3</h1>
+    <script>
+        let numeros=new Array();
+        
+        for (let index = 0; index < 20; index++) {
+            numeros.push(Math.floor(Math.random()*100))
+        }
+
+        document.write(`Numeros del array: ${numeros}<br>`)
+
+        document.write(`El valor maxímo de el array numeros es: ${maxVal(numeros)}<br>`)
+        document.write(`El valor mínimo de el array numeros es: ${minVal(numeros)}<br>`)
+        document.write(`El valor medio de el array numeros es: ${medVal(numeros)}<br>`)
+    </script>
+</body>
+</html>
