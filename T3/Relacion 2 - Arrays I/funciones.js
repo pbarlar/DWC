@@ -95,4 +95,22 @@ function interseccion(arr1,arr2) {
     return iguales;
 }
 
+/**Ejercicio 6
+ * Funcion que comprueba si una cadena esta dentro de otra.
+ * @param {String} cad Cadena de texto
+ * 
+ */
+function contiene() {
+    let cad=document.getElementById("p1").textContent;
+    let cadTexto=prompt("Introduce una cadena de texto y te dire si esta en el parrafo del documento: ")
+    let resultado="";
+    if (cad.includes(cadTexto)) {
+        resultado="La cadena que has introducido si esta en el parrafo.";
+    }else{
+        resultado="La cadena que has introducido no esta en el parrafo.";
+    }
+
+    document.getElementById("resultado").textContent=resultado;
+}
+
 
