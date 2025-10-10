@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+</head>
+
+<body>
+    <script>
+        const articulo1 = {
+            cod: "1",
+            nombre: "Teclado",
+            precio: 30,
+            muestrahtml: function () {
+                let resultado = `Código ${this.cod}, Nombre ${this.nombre}, Precio ${this.precio} <br>`
+                return resultado
+            },
+            pvp: function () {
+                return this.precio * 1.21;
+            },
+            descuento: function (dto) {
+                return this.precio - (this.precio * (dto / 100));
+            }
+        }
+
+        const articulo2 = {
+            cod: "2",
+            nombre: "Ratón",
+            precio: 55,
+            muestrahtml: function () {
+                let resultado = `Código ${this.cod}, Nombre ${this.nombre}, Precio ${this.precio}`
+                return resultado
+            },
+            pvp: function () {
+                return this.precio * 1.21;
+            },
+            descuento: function (dto) {
+                return this.precio - (this.precio * (dto / 100));
+            }
+        }
+
+        const articulo3 = {
+            cod: "3",
+            nombre: "Disco duro",
+            precio: 120,
+            muestrahtml: function () {
+                let resultado = `Código ${this.cod}, Nombre ${this.nombre}, Precio ${this.precio}`
+                return resultado
+            },
+            pvp: function () {
+                return this.precio * 1.21;
+            },
+            descuento: function (dto) {
+                return this.precio - (this.precio * (dto / 100));
+            }
+        }
+
+        const articulo4 = {
+            cod: "4",
+            nombre: "USB",
+            precio: 10,
+            muestrahtml: function () {
+                let resultado = `Código ${this.cod}, Nombre ${this.nombre}, Precio ${this.precio}`
+                return resultado;
+            },
+            pvp: function () {
+                return this.precio * 1.21;
+            },
+            descuento: function (dto) {
+                return this.precio - (this.precio * (dto / 100));
+            }
+        }
+
+        const articulo5 = {
+            cod: "5",
+            nombre: "Monitor",
+            precio: 300,
+            muestrahtml: function () {
+                let resultado = `Código ${this.cod}, Nombre ${this.nombre}, Precio ${this.precio}`
+                return resultado;
+            },
+            pvp: function () {
+                return this.precio * 1.21;
+            },
+            descuento: function (dto) {
+                return this.precio - (this.precio * (dto / 100));
+            }
+        }
+
+
+
+
+        const arrArticulos = [articulo1, articulo2, articulo3, articulo4, articulo5];
+
+        function encuentra(codArticulo) {
+            return arrArticulos.find(element => codArticulo == element.cod);
+        }
+
+        function ordenaNombre(arr) {
+            return arr.sort((elemento1, elemento2) => elemento1.nombre.localeCompare(elemento2.nombre))
+        }
+
+        function ordenaprecio(arr) {
+            return arr.sort((elemento1,elemento2) => elemento1.precio - elemento2.precio);
+        }
+
+
+        console.log(ordenaNombre(arrArticulos));
+        
+    </script>
+</body>
+
+</html>
