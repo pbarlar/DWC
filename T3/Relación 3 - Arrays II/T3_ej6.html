@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6 Relación 3</title>
+</head>
+<body>
+    <h1>Ejercicio 6 Relación 3</h1>
+    <script>
+        const vendedores=[
+            {
+                id:1,
+                nombre:"Jose",
+                ventas: 2000,
+                sueldoSemanal:200,
+                sueldoFinal:0
+            },
+            {
+                id:2,
+                nombre:"Manuel",
+                ventas: 5000,
+                sueldoSemanal:400,
+                sueldoFinal:0
+            }
+        ]
+
+        vendedores.map(vendedor => vendedor.sueldoFinal=vendedor.sueldoSemanal+(vendedor.ventas*0.09))
+
+        vendedores.forEach(vendedor => {
+            document.write(`Nombre ${vendedor.nombre}, Ventas ${vendedor.ventas}€, Sueldo final${vendedor.sueldoFinal}<br>`);
+        })
+    </script>
+</body>
+</html>
