@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 Relación 3</title>
+</head>
+<body>
+    <h1>Ejercicio 5 Relación 3</h1>
+    <script>
+        function paresImpares() {
+            let numeros=[];
+            let pares,impares;
+            for (let index = 0; index < 100; index++) {
+                numeros.push(Math.floor(Math.random()*100)+1);
+            }
+            document.write("Numeros sin ordenar: ",numeros,"<br><br>")
+            pares=numeros.filter(num => num%2==0);
+            impares=numeros.filter(num => num%2!=0);
+
+            let ordenados=pares.concat(impares);
+            document.write("Números ordenados: ", ordenados);
+        }
+
+
+        paresImpares();
+    </script>
+</body>
+</html>
