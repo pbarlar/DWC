@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Relación 3</title>
+</head>
+
+<body>
+    <h1>Ejercicio 1 Relación 3</h1>
+    <script>
+        clase = [
+            {
+                nombre: "Jose Ortiz",
+                edad: 22,
+                nota1: 6,
+                nota2: 9,
+                nota3: 10
+            }, {
+                nombre: "Miguel Campos",
+                edad: 27,
+                nota1: 7,
+                nota2: 4,
+                nota3: 9
+            }
+        ];
+
+    clase.forEach(alumno => {
+        document.write(`Nombre: ${alumno.nombre}<br>`);
+        document.write(`Edad: ${alumno.edad}<br>`);
+        document.write(`Nota 1 Trimestre: ${alumno.nota1}<br>`);
+        document.write(`Nota 2 Trimestre: ${alumno.nota2}<br>`);
+        document.write(`Nota 3 Trimestre: ${alumno.nota3}<br><br>`);
+
+    });
+
+
+    </script>
+</body>
+
+</html>
