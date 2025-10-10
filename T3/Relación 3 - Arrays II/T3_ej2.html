@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 Relación 3</title>
+</head>
+<body>
+    <h1>Ejercicio 2 Relación 3</h1>
+    <script>
+        const clase = [
+            {
+                nombre: "Jose Ortiz",
+                idAlumno: 1,
+                nota1: 6,
+                nota2: 9,
+                nota3: 10
+            }, {
+                nombre: "Miguel Campos",
+                idAlumno: 2,
+                nota1: 7,
+                nota2: 4,
+                nota3: 9
+            }
+        ];
+
+        document.write("Nota del alumno 1 en el Segundo Trimestre: ",getNota(1,2),"<br>");
+        document.write("Nota media del alumno 2: ",getNota(2));
+
+        function getNota(id,trimestre) {
+            const alumno=clase.find(persona => persona.idAlumno==id);
+
+            if (trimestre==1) {
+                return alumno.nota1;
+            }else if(trimestre==2){
+                return alumno.nota2;
+            }else if (trimestre==3) {
+                return alumno.nota3;
+            }
+
+            if (trimestre===undefined) {
+                return Math.floor((alumno.nota1+alumno.nota2+alumno.nota3)/3)
+            }
+        }
+    </script>
+</body>
+</html>
