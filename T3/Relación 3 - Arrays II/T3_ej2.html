@@ -8,6 +8,23 @@
 <body>
     <h1>Ejercicio 2 Relación 3</h1>
     <script>
+        function getNota(id,trimestre) {
+            const alumno=clase.find(persona => persona.idAlumno==id);
+
+            if (trimestre==1) {
+                return alumno.nota1;
+            }else if(trimestre==2){
+                return alumno.nota2;
+            }else if (trimestre==3) {
+                return alumno.nota3;
+            }
+
+            if (trimestre===undefined) {
+                return Math.floor((alumno.nota1+alumno.nota2+alumno.nota3)/3)
+            }
+        }
+
+
         const clase = [
             {
                 nombre: "Jose Ortiz",
@@ -27,21 +44,7 @@
         document.write("Nota del alumno 1 en el Segundo Trimestre: ",getNota(1,2),"<br>");
         document.write("Nota media del alumno 2: ",getNota(2));
 
-        function getNota(id,trimestre) {
-            const alumno=clase.find(persona => persona.idAlumno==id);
-
-            if (trimestre==1) {
-                return alumno.nota1;
-            }else if(trimestre==2){
-                return alumno.nota2;
-            }else if (trimestre==3) {
-                return alumno.nota3;
-            }
-
-            if (trimestre===undefined) {
-                return Math.floor((alumno.nota1+alumno.nota2+alumno.nota3)/3)
-            }
-        }
+        
     </script>
 </body>
 </html>

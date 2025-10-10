@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 Relación 3</title>
+</head>
+<body>
+    <h1>Ejercicio 3 Relación 3</h1>
+    <script>
+        function edadMedia(arr) {
+            let medAge=0;
+            
+            arr.forEach(alumno => {
+                medAge+=alumno.edad;
+            });
+
+            medAge=medAge/arr.length;
+            return medAge;
+        }
+
+
+        const clase = [
+            {
+                nombre: "Jose Ortiz",
+                idAlumno: 1,
+                edad:20,
+                nota1: 6,
+                nota2: 9,
+                nota3: 10
+            }, {
+                nombre: "Miguel Campos",
+                idAlumno: 2,
+                edad:30,
+                nota1: 7,
+                nota2: 4,
+                nota3: 9
+            }
+        ];
+
+        document.write(`Nota media de los alumnos de la clase: ${edadMedia(clase)}`)
+    </script>
+</body>
+</html>
