@@ -20,7 +20,7 @@
                 id:2,
                 nombre:"Manuel",
                 ventas: 5000,
-                sueldoSemanal:400,
+                sueldoSemanal:200,
                 sueldoFinal:0
             }
         ]
@@ -28,7 +28,7 @@
         vendedores.map(vendedor => vendedor.sueldoFinal=vendedor.sueldoSemanal+(vendedor.ventas*0.09))
 
         vendedores.forEach(vendedor => {
-            document.write(`Nombre ${vendedor.nombre}, Ventas ${vendedor.ventas}€, Sueldo final${vendedor.sueldoFinal}<br>`);
+            document.write(`Nombre ${vendedor.nombre}, Ventas ${vendedor.ventas}€, Sueldo final ${vendedor.sueldoFinal}<br>`);
         })
     </script>
 </body>
