@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8 Relación 3</title>
+</head>
+<body>
+    <h1>Ejercicio 8 Relación 3</h1>
+    <h3>Probabilidad suma 2 dados</h3>
+    <script>
+        let dados=[[1,1]];
+        let arrResultado=[0,0,0,0,0,0,0,0,0,0,0];
+        let suma=0;
+
+        for (let index = 0; index < 36000; index++) {
+            dados[0,0]=Math.floor(Math.random()*6)+1;
+            dados[0,1]=Math.floor(Math.random()*6)+1;
+
+            suma=dados[0,0]+dados[0,1];
+
+            arrResultado[suma-2]++;
+        }
+        
+        for (let index = 0; index < arrResultado.length; index++) {
+            document.write(`Numero ${index+2}: ${arrResultado[index]}<br>`); 
+        }
+    </script>
+</body>
+</html>
