@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 Relación 5</title>
+</head>
+<body>
+    <h1>Ejercicio 3 Relación 5</h1>
+    <script>
+        let nombres=["John Doe","Jane Smith","Alice Johnson","Jack Aniels","Michael Jordan"];
+
+        document.write(`Nombres: ${nombres}<br>`)
+
+        nombres=nombres.filter(nombre => nombre[0]=="J");
+        nombres=nombres.map(nombre=>nombre.split(" ").map(nombre => nombre[0]).join("."));
+        nombres.sort();
+        document.write(nombres)
+    </script>
+</body>
+</html>
