@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Relación 5</title>
+</head>
+<body>
+    <h1>Ejercicio 1 Relación 5</h1>
+    <script>
+        let colores1=["azul","amarillo","verde","rojo","gris","negro","violeta","iris"];
+        let numeros=[8,1,3,10,2,4,5,9];
+
+        numeros.sort( (n1,n2) => n2 - n1)
+        
+        colores1.sort (function (cad1,cad2) {
+            if (cad1.length<cad2.length) {
+                return 1;
+            }else if (cad1.length==cad2.length) {
+                return 0;
+            }else{
+                return -1;
+            }
+        })
+
+        document.write(`- Número mas largo del array [8,1,3,10,2,4,5,9]: ${numeros[0]}<br>`)
+        document.write(`- String mas larga del array ["azul","amarillo","verde","rojo","negro","violeta"]: ${colores1[0]} <br>`)
+        document.write(`- Numeros pares en el array [8,1,3,10,2,4,5,9]: ${numeros.filter(numeros => numeros%2==0)}<br>`)
+        document.write(`- Numeros impares en el array [8,1,3,10,2,4,5,9]: ${numeros.filter(numeros => numeros%2!=0)}<br>`)
+        document.write(`- String que contienen 'is' en array  ["azul","amarillo","verde","rojo","gris","negro","violeta","iris"]: ${colores1.filter(color => color.includes("is"))}<br>`)
+        document.write(`- Numeros dividibles por 3 en el array [8,1,3,10,2,4,5,9]: ${numeros.filter(numeros => numeros%3==0)}<br>`)
+
+        const twoArrays=colores1.concat(numeros);
+        document.write(`- Unir dos arrays: ${twoArrays} <br>`)
+
+        colores1.sort (function (cad1,cad2) {
+            if (cad1.length<cad2.length) {
+                return -1;
+            }else if (cad1.length==cad2.length) {
+                return 0;
+            }else{
+                return 1;
+            }
+        })
+        document.write(`- Array ["azul","amarillo","verde","rojo","gris","negro","violeta","iris"] ordenado de mas pequeño a mas grande: ${colores1}<br>`)
+        
+        colores1=["azul","amarillo","verde","rojo","gris","negro","violeta","iris"]
+        colores1.splice(0,1)
+        document.write(`- Array de colores con la primera palabra eliminada ${colores1}<br>`)
+
+        colores1.splice(0,0,"rosa");
+        document.write(`- Array de colores con la primera palabra añadida ${colores1}<br>`)
+
+        numeros=[8,1,3,10,2,4,5,9]
+        numeros.splice(2,2,12,13)
+        document.write(`- Array de numeros cambiando los numeros 3 y 10 por 12 y 13: ${numeros}`)
+        
+    </script>
+</body>
+</html>
