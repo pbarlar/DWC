@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 11 Relación 3</title>
+</head>
+<body>
+  <h1>Ejercicio 11 Relación 3</h1>
+  <script>
+    // Creamos la matriz 4x5
+    let vendedores = Array.from({ length: 4 }, () => Array(5).fill(0));
+
+    // Datos de ejemplo
+    let estadillos = [
+      { vendedor: 1, producto: 3, valor: 200 },
+      { vendedor: 2, producto: 5, valor: 150 },
+      { vendedor: 1, producto: 3, valor: 100 },
+      { vendedor: 3, producto: 2, valor: 300 },
+      { vendedor: 4, producto: 1, valor: 250 }
+    ];
+
+    // Recorremos los estadillos con forEach y acumulamos las ventas
+    estadillos.forEach(hoja => {
+      vendedores[hoja.vendedor - 1][hoja.producto - 1] += hoja.valor;
+    });
+
+    // Calcular totales por vendedor (columnas)
+    let totalVendedor = Array(4).fill(0);
+    vendedores.forEach((filaVendedor, i) => {
+      filaVendedor.forEach(valor => {
+        totalVendedor[i] += valor;
+      });
+    });
+
+    // Calcular totales por producto (filas)
+    let totalProductos = Array(5).fill(0);
+    for (let p = 0; p < 5; p++) {
+      for (let v = 0; v < 4; v++) {
+        totalProductos[p] += vendedores[v][p];
+      }
+    }
+
+    // Crear tabla XHTML
+    let tabla = "<table border='1' cellpadding='5'><tr><th>Producto/Vendedor</th>";
+    for (let v = 1; v <= 4; v++) {
+      tabla += `<th>Vendedor ${v}</th>`;
+    }
+    tabla += "<th>Total Producto</th></tr>";
+
+    for (let p = 0; p < 5; p++) {
+      tabla += `<tr><td>Producto ${p + 1}</td>`;
+      for (let v = 0; v < 4; v++) {
+        tabla += `<td>${vendedores[v][p]}</td>`;
+      }
+      tabla += `<td>${totalProductos[p]}</td></tr>`;
+    }
+
+    // Fila final: totales por vendedor
+    tabla += "<tr><td><strong>Total Vendedor</strong></td>";
+    totalVendedor.forEach(total => {
+      tabla += `<td><strong>${total}</strong></td>`;
+    });
+    tabla += "<td></td></tr></table>";
+
+    document.write(tabla);
+  </script>
+</body>
+</html>
