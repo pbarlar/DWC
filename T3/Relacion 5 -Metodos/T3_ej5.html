@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <script src="tesoro.js"></script>
+    <style>
+        table{
+            border-collapse: collapse;  
+        }
+        td{
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 5</h1>
+    <h3>Punto de silla</h3>
+    <script>
+        let mapa = tablero(5, 5);
+        document.write("<table>")
+        for (let index = 0; index < mapa.length; index++) {
+            document.write("<tr>")
+            for (let f = 0; f < mapa[index].length; f++) {
+                mapa[index][f]=Math.floor(Math.random()*10)+1;
+                document.write(`<td>${mapa[index][f]}</td>`)
+            }
+            document.write("</tr>")
+        }
+        document.write("</table>");
+
+
+        let mayorfila=tablero[0][0];
+        let minimocolumna=tablero[0][0];
+
+        
+    </script>
+</body>
+
+</html>

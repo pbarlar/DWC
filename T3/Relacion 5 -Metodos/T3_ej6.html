@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6 Relación 5 Metodos</title>
+</head>
+
+<body>
+    <h1>Ejercicio 6</h1>
+    <script>
+        let cad = prompt("Introduce una cadena de caracteres: ");
+        let ncad = cad.replace(/ /g, "");
+        let indiceCadena = 0;
+
+        let columnas = Math.sqrt(ncad.length);
+        if (ncad.length % columnas != 0) {
+            columnas++;
+            columnas = Math.floor(columnas)
+        }
+
+        for (let index = 0; index < columnas; index++) {
+            for (let f = 0; f < columnas; f++) {
+                if (indiceCadena < ncad.length) {
+                    document.write(ncad[indiceCadena]);
+                    indiceCadena++;
+                } else {
+                    document.write(" ");
+                }
+            }
+            document.write("<br>")
+        }
+
+    </script>
+</body>
+
+</html>
