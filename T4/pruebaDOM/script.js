@@ -13,9 +13,32 @@ function inicializaEventos() {
 
 }
 
+function mouseOverDiv() {
+    document.getElementById("div1").addEventListener("mouseover",(event)=>{
+        document.getElementById("div1").style.backgroundColor="red"
+        document.getElementById("div1").textContent = (`${event.pageX},${event.pageY}`)
+        if (event.ctrlKey) {
+            alert("Has entrado con el CTRL pulsado")
+        }
+        
+        console.log(`Evento ${event.type} en  ${event.target.tagName}`)
+    })
+}
+
+
+function mouseOutDiv() {
+    document.getElementById("div1").addEventListener("mouseout",(event)=>{
+        document.getElementById("div1").style.backgroundColor="aquamarine"
+        document.getElementById("div1").textContent = (`Div1`)
+    })
+}
+
+
 
 
 
 (()=>{
-    inicializaEventos();
+    mouseOverDiv();
+
+    mouseOutDiv();
 })();
