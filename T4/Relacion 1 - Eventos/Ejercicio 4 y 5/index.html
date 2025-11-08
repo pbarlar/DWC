@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .padre {
+            margin-left: 500px;
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            /* Permite que las celdas salten a la siguiente línea */
+            width: 325px;
+            /* 100 celdas * 10px = 1000px */
+            height: 325px;
+            /* opcional, solo para mantener proporción */
+            border: 2px solid #333;
+            align-content: flex-start
+        }
+
+        .padre div {
+            width: 10px;
+            height: 10px;
+            background-color: lightgray;
+            
+            box-sizing: border-box;
+        }
+
+        button{
+            color: white;
+            background-color: blueviolet;
+            padding: 5px;
+            margin-left: 600px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="limpiar">Limpiar tablero</button>
+    <script type="module" src="main04.js"></script>
+</body>
+
+</html>
