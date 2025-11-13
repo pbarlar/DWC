@@ -21,6 +21,10 @@ function moverImagenes() {
       offsetY = event.clientY - imagen.offsetTop;
     });
 
+
+    imagen.addEventListener("dragstart", (event) => event.preventDefault());
+
+    
     document.addEventListener("mouseup", () => {
       moviendo = false;
       imagen.style.cursor = "grab";
