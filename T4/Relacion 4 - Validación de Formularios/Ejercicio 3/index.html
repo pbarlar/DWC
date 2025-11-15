@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main03.js"></script>
+    <title>Ejercicio 3 Login</title>
+    <style>
+        body{
+            background-color: hotpink;
+        }
+
+        div{
+            width: 30%;
+            height: 200px;
+            margin: 200px auto
+        }
+
+        input{
+            margin-left: 30px;
+            background-color: hotpink;
+            font-size: 20px;
+            text-align: center;
+            border: none;
+            border-bottom: 2px solid white;
+        }
+
+        input:focus{
+            border: none;
+            border-bottom: 2px solid white;
+        }
+
+        li{
+            margin-left: 60px;
+            color: white;
+        }
+
+        button{
+            margin-left: 120px;
+            background-color: rgb(255, 255, 255,0.6);
+            border: none;
+            padding: 5px 20px;
+            color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" name="user" id="user" placeholder="username">
+        <ul>
+            <li id="lower">1 lowercase character</li>
+            <li id="upper">1 uppercase character</li>
+            <li id="min">6 minimum character</li>
+        </ul>
+        <button type="submit">Submit</button>
+    </div>
+</body>
+</html>
