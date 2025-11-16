@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+/* ------------------- LEFT SIDE (IMAGE) ------------------- */
+
+.left-side {
+  flex: 1;
+  background-image: url("crowdise.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ------------------- RIGHT SIDE (FORM) ------------------- */
+
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #fafafa;
+}
+
+.form-box {
+  width: 80%;
+  max-width: 420px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.login-text {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.login-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.row input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.check {
+  display: block;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.check input {
+  margin-right: 6px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #0057c2;
+}
+
+.footer-text {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-text a {
+  color: #007bff;
+  text-decoration: none;
+}
