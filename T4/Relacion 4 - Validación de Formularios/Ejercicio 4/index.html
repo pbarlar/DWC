@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registro - Ejemplo</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="main04.js"></script>
 </head>
 <body>
 
@@ -27,18 +28,18 @@
 
         <form>
           <div class="row">
-            <input type="text" placeholder="First Name" required />
-            <input type="text" placeholder="Last Name" required />
+            <input type="text" placeholder="First Name" required id="fname"/>
+            <input type="text" placeholder="Last Name" required id="lname" />
           </div>
 
           <div class="row">
-            <input type="tel" placeholder="Phone" required />
-            <input type="email" placeholder="Email" required />
+            <input type="tel" placeholder="Phone" required id="phone" />
+            <input type="email" placeholder="Email" required id="email"/>
           </div>
 
           <div class="row">
-            <input type="password" placeholder="Password" required />
-            <input type="password" placeholder="Confirm Password" required />
+            <input type="password" placeholder="Password" required id="password"/>
+            <input type="password" placeholder="Confirm Password" required id="repeat_password"/>
           </div>
 
           <label class="check">
