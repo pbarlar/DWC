@@ -30,60 +30,81 @@ function crearDivs(nodoPadre, numDiv) {
 }
 
 
-function creacionEstudiantes(padre) {
-    for (let index = 0; index < db.students.length; index++) {
-        const div = document.createElement("div");
-        div.id = `Estudiante${db.students[index].id}`;
 
 
-        const nombre = document.createElement("p");
-        nombre.textContent = db.students[index].name;
-
-        const level = document.createElement("p");
-        level.textContent = db.students[index].level;
-
-        div.appendChild(nombre);
-        div.appendChild(level);
-
-        div.style.border = "1px solid black"
-        div.style.margin = "15px"
-        div.style.padding = "10px"
+function mostrarEstudiantes(padre) {
+    function estudiantes() {
+        padre.innerHTML="";
+        for (let index = 0; index < db.students.length; index++) {
+            const div = document.createElement("div");
+            div.id = `Estudiante${db.students[index].id}`;
 
 
-        padre.appendChild(div);
+            const nombre = document.createElement("p");
+            nombre.textContent = db.students[index].name;
+
+            const level = document.createElement("p");
+            level.textContent = db.students[index].level;
+
+            div.appendChild(nombre);
+            div.appendChild(level);
+
+            div.style.border = "1px solid black"
+            div.style.margin = "15px"
+            div.style.padding = "10px"
+            padre.style.display = "flex"
+
+
+            padre.appendChild(div);
+        }
     }
 
-    padre.style.display = "flex"
+    estudiantes();
+    document.getElementById("activos").addEventListener("change", (e) => {
+        if (!e.target.checked) {
+            estudiantes();
+        } else {
+            padre.innerHTML = "";
 
-    document.getElementById("activos").addEventListener("change", () => {
-        padre.innerHTML = "";
-
-        for (let index = 0; index < db.students.length; index++) {
-            if (db.students[index].active==true) {
-                const div = document.createElement("div");
-                div.id = `Estudiante${db.students[index].id}`;
-
-
-                const nombre = document.createElement("p");
-                nombre.textContent = db.students[index].name;
-
-                const level = document.createElement("p");
-                level.textContent = db.students[index].level;
-
-                div.appendChild(nombre);
-                div.appendChild(level);
-
-                div.style.border = "1px solid black"
-                div.style.margin = "15px"
-                div.style.padding = "10px"
+            for (let index = 0; index < db.students.length; index++) {
+                if (db.students[index].active == true) {
+                    const div = document.createElement("div");
+                    div.id = `Estudiante${db.students[index].id}`;
 
 
-                padre.appendChild(div);
+                    const nombre = document.createElement("p");
+                    nombre.textContent = db.students[index].name;
+
+                    const level = document.createElement("p");
+                    level.textContent = db.students[index].level;
+
+                    div.appendChild(nombre);
+                    div.appendChild(level);
+
+                    div.style.border = "1px solid black"
+                    div.style.margin = "15px"
+                    div.style.padding = "10px"
+
+
+                    padre.appendChild(div);
+                }
+
             }
 
         }
+
+        padre.style.display = "flex"
     })
+
+
+
+    const divEstudiantes=document
+
 }
+
+
+
+
 
 
 
@@ -91,7 +112,7 @@ function creacionEstudiantes(padre) {
 
 (() => {
     // crearDivs(document.getElementById("contenedor"),6);
-    creacionEstudiantes(document.getElementById("contenedor"));
+    mostrarEstudiantes(document.getElementById("contenedor"));
 })();
 
 
