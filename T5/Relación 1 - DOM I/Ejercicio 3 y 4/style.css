@@ -1,0 +1,73 @@
+/* --- 1. Estilos Generales --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Un fondo gris claro */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* --- 2. Contenedor Principal (Lista de Artículos) --- */
+#articulos {
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor */
+    display: grid;
+    /* Crea un layout de rejilla con columnas adaptables */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Espacio entre las tarjetas */
+    padding: 20px 0;
+}
+
+/* --- 3. Estilo de Cada Artículo (El elemento <p> que contiene los datos) --- */
+#articulos p {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Si estás usando la forma de texto simple como en la imagen,
+       usaremos flexbox para organizar el contenido (si el JS lo permite) */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px; /* Altura mínima para que se vean uniformes */
+    white-space: pre-wrap; /* Permite saltos de línea y formateo */
+}
+
+#articulos p:hover {
+    transform: translateY(-5px); /* Pequeño efecto al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 4. Estilos para Resaltar la Información --- */
+
+/* Estilo para los títulos (asumiendo que los parsearemos después) */
+/* Si el contenido sigue siendo una sola línea de texto, esto no aplica */
+.item-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.item-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #007bff; /* Color azul para el precio */
+    margin-top: 10px;
+}
+
+.item-rating {
+    color: #ffc107; /* Color amarillo para la valoración */
+    font-weight: bold;
+}
+
+.item-description {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+    flex-grow: 1; /* Permite que la descripción ocupe el espacio restante */
+}
+
+
