@@ -4,10 +4,11 @@ export class Book {
         this.genre=genre
         this.author=author
         this.read=false
-        this.readDate=""
+        this.readDate=null;
     }
 
     readed(){
         this.read=true
+        this.readDate=new Date();
     }
 }
