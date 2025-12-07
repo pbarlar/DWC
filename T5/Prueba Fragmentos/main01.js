@@ -90,9 +90,15 @@ const filtrarCategorias = () => {
     })
 }
 
-function getFetch(){
-    fetch("https://fakestoreapi.com/products")
-        .then(response => response.json())
+
+function get(url) {
+    return fetch(url)
+            .then(result => result.json())
+}
+
+
+function getFetch3(url){
+    get(url)
         .then (json => mostrarProductos(json))
 }
 
@@ -111,7 +117,7 @@ const main = () => {
 
     //filtrarCategorias();
 
-    getFetch()
+    getFetch3("https://fakestoreapi.com/products")
 
 }
 
