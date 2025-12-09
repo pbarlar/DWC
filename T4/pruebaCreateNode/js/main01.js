@@ -8,7 +8,7 @@ let enrollments = [];
 // FETCH
 // --------------------------------------
 async function fetchStudents() {
-    const datos = await fetch("http://localhost:3000/students");
+    const datos = await fetch("http://localhost:3000/students")
     db = await datos.json();
     return db;
 }
@@ -19,6 +19,8 @@ async function fetchEnrollments() {
     enrollments = await datos.json();
     return enrollments;
 }
+
+
 
 // --------------------------------------
 // MOSTRAR ENROLLMENTS
@@ -85,7 +87,7 @@ function validarInicioSesion() {
 }
 
 // --------------------------------------
-// VALIDACIÓN DE SESIÓN
+// CARGAR INICIO
 // --------------------------------------
 function cargarInicio() {
     if (window.location.pathname.includes("login.html")) return;
@@ -96,10 +98,8 @@ function cargarInicio() {
 }
 
 // --------------------------------------
-// INICIO
+// MAIN
 // --------------------------------------
-
-
 
 document.addEventListener("DOMContentLoaded", async () => {
 
